@@ -5,71 +5,71 @@
 
 
 $(document).ready(function () {
-    class ContentItem {
-      // Properties
-      IDNumber;
-      Name;
-      Description;
-      CategoryGenre;
+  class ContentItem {
+    // Properties
+    IDNumber;
+    Name;
+    Description;
+    CategoryGenre;
 
-      // Constructor
-      constructor(IDNumber, Name, Description, CategoryGenre) {
-        this.IDNumber = IDNumber;
-        this.Name = Name;
-        this.Description = Description;
-        this.CategoryGenre = CategoryGenre;
-      }
+    // Constructor
+    constructor(IDNumber, Name, Description, CategoryGenre) {
+      this.IDNumber = IDNumber;
+      this.Name = Name;
+      this.Description = Description;
+      this.CategoryGenre = CategoryGenre;
+    }
 
-      // Method to update content item
-      updateContentItem(IDNumber, Name, Description, CategoryGenre) {
-        if (this.IDNumber === IDNumber) {
-          if (Name !== null) {
-            this.Name = Name;
-          }
-          if (Description !== null) {
-            this.Description = Description;
-          }
-          if (CategoryGenre !== null) {
-            this.CategoryGenre = CategoryGenre;
-          }
+    // Method to update content item
+    updateContentItem(IDNumber, Name, Description, CategoryGenre) {
+      if (this.IDNumber === IDNumber) {
+        if (Name !== null) {
+          this.Name = Name;
         }
-      }
-
-      // Method to generate HTML representation of content item
-      toString() {
-        return `
-          <div class="content-item-wrapper" id="content-item-${this.IDNumber}">
-            <h2>${this.Name}</h2>
-            <p>${this.Description}</p>
-            <div>${this.CategoryGenre}</div>
-          </div>
-        `;
+        if (Description !== null) {
+          this.Description = Description;
+        }
+        if (CategoryGenre !== null) {
+          this.CategoryGenre = CategoryGenre;
+        }
       }
     }
 
-    const $contentList = $("#content-item-list");
+    // Method to generate HTML representation of content item
+    toString() {
+      return `
+        <div class="content-item-wrapper" id="content-item-${this.IDNumber}">
+          <h2>${this.Name}</h2>
+          <p>${this.Description}</p>
+          <div>${this.CategoryGenre}</div>
+        </div>
+      `;
+    }
+  }
 
-    const contentItems = [
-      new ContentItem(0, "Item 1", "Description 1", "Genre 1"),
-      new ContentItem(1, "Item 2", "Description 2", "Genre 2"),
-      new ContentItem(2, "Item 3", "Description 3", "Genre 3"),
-      new ContentItem(3, "Item 4", "Description 4", "Genre 4"),
-      new ContentItem(4, "Item 5", "Description 5", "Genre 5"),
-    ];
+  const $contentList = $("#content-item-list");
 
-    contentItems.forEach((contentItem) => {
-      const $contentItem = $(contentItem.toString());
+  const contentItems = [
+    new ContentItem(0, "MAX", "he love the sport but he is just lazy sometime", "basketball"),
+    new ContentItem(1, "Abdul", "Abdul is very taled player but his attide is not the best", "soccer"),
+    new ContentItem(2, "Abbas", "he is young player as some time to impove ", "golf"),
+    new ContentItem(3, "Obeida", "he is loved the sports but got injured and could play ", "football"),
+    new ContentItem(4, "JR", "he just played for fun", "cars"),
+  ];
 
-      // Add styles to the content item
-      $contentItem.css({
-        border: "1px solid #ccc",
-        width: "300px",
-        padding: "10px",
-        margin: "10px auto",
-      });
+  contentItems.forEach((contentItem) => {
+    const $contentItem = $(contentItem.toString());
 
-      $contentList.append($contentItem);
+    // Add styles to the content item
+    $contentItem.css({
+      border: "1px solid #ccc",
+      width: "300px",
+      padding: "10px",
+      margin: "10px auto",
     });
+
+    $contentList.append($contentItem);
   });
+});
 
 
