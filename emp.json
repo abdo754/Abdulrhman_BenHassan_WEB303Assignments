@@ -1,0 +1,51 @@
+[
+    {
+        "firstName": "Ashito",
+        "lastName": "Aoi",
+        "Number": "33",
+        "Position": "Fullback",
+        "Academy": "NO"
+    },
+    {
+        "firstName": "Sōichirō",
+        "lastName": "Tachibana",
+        "Number": "28",
+        "Position": "Forward",
+        "Academy": "NO"
+    },
+    {
+        "firstName": "Yūma",
+        "lastName": "Motoki",
+        "Number": "29",
+        "Position": "Forward",
+        "Academy": "YES"
+    },
+    {
+        "firstName": "Eisaku",
+        "lastName": "Ōtomo",
+        "Number": "36",
+        "Position": "Midfielder",
+        "Academy": "NO"
+    },
+    {
+        "firstName": "Keiji",
+        "lastName": "Ōtomo",
+        "Number": "31",
+        "Position": "Defender",
+        "Academy": "NO"
+    },
+    {
+        "firstName": "Kanpei",
+        "lastName": "Kuroda",
+        "Number": "26",
+        "Position": "Defender/Midfielder",
+        "Academy": "YES"
+    },
+    {
+        "firstName": "Ryūichi",
+        "lastName": "Takeshima",
+        "Number": "27",
+        "Position": "Defender",
+        "Academy": "YES"
+    }
+]
